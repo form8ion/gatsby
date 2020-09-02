@@ -1,0 +1,6 @@
+_extends: .github
+repository:
+  name: gatsby
+  description: opinionated scaffolder for Gatsby
+  homepage: 'https://npm.im/@form8ion/gatsby'
+  private: false
