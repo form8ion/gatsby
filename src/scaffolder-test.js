@@ -1,3 +1,4 @@
+import deepmerge from 'deepmerge';
 import {assert} from 'chai';
 import sinon from 'sinon';
 import any from '@travi/any';
@@ -22,6 +23,21 @@ suite('scaffolder', () => {
 
     const results = await scaffold({projectRoot});
 
-    assert.deepEqual(results, testingResults);
+    assert.deepEqual(
+      results,
+      deepmerge(
+        testingResults,
+        {
+          dependencies: ['gatsby', 'react', 'react-dom'],
+          scripts: {
+            clean: 'gatsby clean',
+            start: 'run-s develop',
+            dev: 'gatsby develop',
+            serve: 'gatsby serve',
+            build: 'gatsby build'
+          }
+        }
+      )
+    );
   });
 });
