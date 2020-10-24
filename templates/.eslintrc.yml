@@ -1,0 +1,7 @@
+overrides:
+  - files: ['index.js']
+    extends: '@form8ion/react'
+    rules:
+      import/no-extraneous-dependencies:
+        - error
+        - devDependencies: true

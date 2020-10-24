@@ -20,6 +20,10 @@ When('the project is scaffolded', async function () {
     [packagePreviewDirectory]: {
       '@form8ion': {
         gatsby: {
+          templates: {
+            'gatsby-config.js': await fs.readFile(resolve(__dirname, '../../../../', 'templates/gatsby-config.js')),
+            'index.js': await fs.readFile(resolve(__dirname, '../../../../', 'templates/index.js'))
+          },
           node_modules: {
             '.pnpm': {
               '@form8ion': {

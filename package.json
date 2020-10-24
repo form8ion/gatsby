@@ -5,7 +5,8 @@
   "version": "0.0.0-semantically-released",
   "files": [
     "example.js",
-    "lib/"
+    "lib/",
+    "templates/"
   ],
   "publishConfig": {
     "access": "public"
@@ -53,6 +54,7 @@
     "@form8ion/eslint-config": "1.6.29",
     "@form8ion/eslint-config-cucumber": "1.4.0",
     "@form8ion/eslint-config-mocha": "1.2.9",
+    "@form8ion/eslint-config-react": "1.15.31",
     "@form8ion/remark-lint-preset": "1.0.10",
     "@istanbuljs/nyc-config-babel": "3.0.0",
     "@travi/any": "2.0.12",
@@ -69,6 +71,7 @@
     "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
     "package-preview": "3.0.0",
+    "react": "17.0.1",
     "remark-cli": "8.0.1",
     "remark-toc": "7.0.0",
     "remark-usage": "8.0.0",
@@ -80,6 +83,7 @@
   "dependencies": {
     "@form8ion/cypress-scaffolder": "^2.2.0",
     "@form8ion/is-website-vulnerable": "^1.0.0",
-    "deepmerge": "^4.2.2"
+    "deepmerge": "^4.2.2",
+    "make-dir": "^3.1.0"
   }
 }
