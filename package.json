@@ -29,7 +29,7 @@
     "pretest:integration": "preview",
     "lint:gherkin": "gherkin-lint",
     "test:integration": "run-s 'test:integration:base -- --profile noWip'",
-    "test:integration:base": "DEBUG=any cucumber-js test/integration --profile base",
+    "test:integration:base": "NODE_OPTIONS=--enable-source-maps DEBUG=any cucumber-js test/integration --profile base",
     "test:integration:debug": "DEBUG=test run-s test:integration",
     "test:integration:wip": "run-s 'test:integration:base -- --profile wip'",
     "test:integration:focus": "run-s 'test:integration:base -- --profile focus'",
@@ -42,12 +42,14 @@
     "test:unit": "nyc run-s test:unit:base",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "test:unit:base": "DEBUG=any mocha 'src/**/*-test.js'",
-    "lint:peer": "npm ls >/dev/null"
+    "lint:peer": "npm ls >/dev/null",
+    "test:integration:wip:debug": "DEBUG=test run-s 'test:integration:wip'"
   },
   "devDependencies": {
     "@babel/register": "7.11.5",
+    "@cucumber/cucumber": "7.0.0-rc.0",
     "@form8ion/babel-preset": "1.6.31",
-    "@form8ion/commitlint-config": "1.0.12",
+    "@form8ion/commitlint-config": "1.0.14",
     "@form8ion/eslint-config": "1.6.29",
     "@form8ion/eslint-config-cucumber": "1.4.0",
     "@form8ion/eslint-config-mocha": "1.2.9",
@@ -58,7 +60,6 @@
     "ban-sensitive-files": "1.9.9",
     "chai": "4.2.0",
     "codecov": "3.7.2",
-    "cucumber": "6.0.5",
     "cz-conventional-changelog": "3.3.0",
     "gherkin-lint": "4.1.2",
     "husky": "4.2.5",
@@ -75,5 +76,10 @@
     "rollup": "2.26.9",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "9.0.3"
+  },
+  "dependencies": {
+    "@form8ion/cypress-scaffolder": "^2.2.0",
+    "@form8ion/is-website-vulnerable": "^1.0.0",
+    "deepmerge": "^4.2.2"
   }
 }
