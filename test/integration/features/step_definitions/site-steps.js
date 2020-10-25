@@ -3,15 +3,16 @@ import {Then} from '@cucumber/cucumber';
 import {assert} from 'chai';
 
 Then('the site is available', async function () {
-  const {dependencies, eslintConfigs, scripts} = this.results;
+  const {buildDirectory, dependencies, eslintConfigs, nextSteps, scripts} = this.results;
 
-  ['gatsby', 'react', 'react-dom'].forEach(dependency => assert.include(dependencies, dependency));
+  assert.equal(buildDirectory, 'public');
+  assert.includeMembers(dependencies, ['gatsby', 'react', 'react-dom']);
   assert.include(eslintConfigs, 'react');
   assert.include(
     scripts,
     {
       clean: 'gatsby clean',
-      start: 'run-s develop',
+      start: 'run-s dev',
       dev: 'gatsby develop',
       serve: 'gatsby serve',
       build: 'gatsby build'
@@ -39,5 +40,15 @@ export default function Home() {
   return <div>Hello world!</div>;
 }
 `
+  );
+  assert.includeDeepMembers(
+    nextSteps,
+    [
+      {
+        summary: 'remove the babel preset and related dependencies',
+        description: 'since it is preferred to use the one that is bundled with gatsby'
+      },
+      {summary: 'disable the peer dependency check', description: 'since the gatsby dependencies are a wild west'}
+    ]
   );
 });

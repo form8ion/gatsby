@@ -6,7 +6,7 @@ Then('smoke tests are wired up', async function () {
   const {devDependencies, eslintConfigs, scripts} = this.results;
 
   assert.includeMembers(devDependencies, ['cypress', 'start-server-and-test', 'is-website-vulnerable']);
-  assert.includeDeepMembers(eslintConfigs, [{files: 'test/smoke/**/*-spec.js', name: 'cypress'}]);
+  assert.deepInclude(eslintConfigs, {files: 'test/smoke/**/*-spec.js', name: 'cypress'});
   assert.include(
     scripts,
     {

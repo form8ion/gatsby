@@ -28,15 +28,27 @@ suite('gatsby scaffolder', () => {
     assert.deepEqual(
       results,
       {
+        buildDirectory: 'public',
         dependencies: ['gatsby', 'react', 'react-dom'],
         eslintConfigs: ['react'],
         scripts: {
           clean: 'gatsby clean',
-          start: 'run-s develop',
+          start: 'run-s dev',
           dev: 'gatsby develop',
           serve: 'gatsby serve',
           build: 'gatsby build'
-        }
+        },
+        vcsIgnore: {directories: ['.cache']},
+        nextSteps: [
+          {
+            summary: 'remove the babel preset and related dependencies',
+            description: 'since it is preferred to use the one that is bundled with gatsby'
+          },
+          {
+            summary: 'disable the peer dependency check',
+            description: 'since the gatsby dependencies are a wild west'
+          }
+        ]
       }
     );
     assert.calledWith(
