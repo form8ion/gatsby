@@ -11,6 +11,7 @@ export default async function ({projectRoot}) {
 
   return {
     dependencies: ['gatsby', 'react', 'react-dom'],
+    eslintConfigs: ['react'],
     scripts: {
       clean: 'gatsby clean',
       start: 'run-s develop',

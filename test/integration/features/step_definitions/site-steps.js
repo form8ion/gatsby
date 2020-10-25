@@ -3,9 +3,10 @@ import {Then} from '@cucumber/cucumber';
 import {assert} from 'chai';
 
 Then('the site is available', async function () {
-  const {dependencies, scripts} = this.results;
+  const {dependencies, eslintConfigs, scripts} = this.results;
 
   ['gatsby', 'react', 'react-dom'].forEach(dependency => assert.include(dependencies, dependency));
+  assert.include(eslintConfigs, 'react');
   assert.include(
     scripts,
     {

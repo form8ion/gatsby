@@ -29,6 +29,7 @@ suite('gatsby scaffolder', () => {
       results,
       {
         dependencies: ['gatsby', 'react', 'react-dom'],
+        eslintConfigs: ['react'],
         scripts: {
           clean: 'gatsby clean',
           start: 'run-s develop',
