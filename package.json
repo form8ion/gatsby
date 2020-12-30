@@ -54,7 +54,7 @@
     "@form8ion/eslint-config": "1.7.3",
     "@form8ion/eslint-config-cucumber": "1.4.0",
     "@form8ion/eslint-config-mocha": "1.2.9",
-    "@form8ion/eslint-config-react": "1.15.34",
+    "@form8ion/eslint-config-react": "1.15.35",
     "@form8ion/remark-lint-preset": "1.0.11",
     "@istanbuljs/nyc-config-babel": "3.0.0",
     "@travi/any": "2.0.15",
