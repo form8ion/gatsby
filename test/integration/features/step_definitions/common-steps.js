@@ -26,18 +26,16 @@ When('the project is scaffolded', async function () {
           },
           node_modules: {
             '.pnpm': {
-              '@form8ion': {
-                'cypress-scaffolder@2.2.0': {
-                  node_modules: {
-                    '@form8ion': {
-                      'cypress-scaffolder': {
-                        templates: {
-                          'canary-spec.js': await fs.readFile(resolve(
-                            __dirname,
-                            '../../../../',
-                            'node_modules/@form8ion/cypress-scaffolder/templates/canary-spec.js'
-                          ))
-                        }
+              '@form8ion+cypress-scaffolder@2.2.0': {
+                node_modules: {
+                  '@form8ion': {
+                    'cypress-scaffolder': {
+                      templates: {
+                        'canary-spec.js': await fs.readFile(resolve(
+                          __dirname,
+                          '../../../../',
+                          'node_modules/@form8ion/cypress-scaffolder/templates/canary-spec.js'
+                        ))
                       }
                     }
                   }
