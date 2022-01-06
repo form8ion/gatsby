@@ -21,11 +21,12 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: 12.x
-      - uses: bahmutov/npm-install@v1
+          node-version-file: '.npmrc'
+          cache: npm
+      - run: npm clean-install
       - run: npm test
       - name: semantic-release
         uses: cycjimmy/semantic-release-action@v2
         env:
-          GITHUB_TOKEN: '${{ secrets.GH_TOKEN }}'
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           NPM_TOKEN: '${{ secrets.NPM_PUBLISH_TOKEN }}'
