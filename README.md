@@ -14,6 +14,8 @@ opinionated scaffolder for [Gatsby](https://www.gatsbyjs.com/)
 * [Usage](#usage)
   * [Installation](#installation)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -45,9 +47,7 @@ import {scaffold} from '@form8ion/gatsby';
 #### Execute
 
 ```javascript
-(async () => {
   await scaffold({projectRoot: process.cwd()});
-})();
 ```
 
 ## Contributing

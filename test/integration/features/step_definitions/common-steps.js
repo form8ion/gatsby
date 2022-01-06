@@ -12,8 +12,7 @@ After(function () {
 
 When('the project is scaffolded', async function () {
   // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
-  const mdxDeck = require('@form8ion/gatsby');
-  const {scaffold} = mdxDeck;
+  const {scaffold} = require('@form8ion/gatsby');
 
   stubbedFs({
     node_modules: stubbedNodeModules,
