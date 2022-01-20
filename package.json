@@ -54,7 +54,7 @@
     "@form8ion/eslint-config": "2.0.3",
     "@form8ion/eslint-config-cucumber": "1.4.0",
     "@form8ion/eslint-config-mocha": "1.2.16",
-    "@form8ion/eslint-config-react": "1.15.54",
+    "@form8ion/eslint-config-react": "1.15.56",
     "@form8ion/remark-lint-preset": "2.1.7",
     "@travi/any": "2.0.19",
     "babel-plugin-istanbul": "6.1.1",
