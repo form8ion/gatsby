@@ -3,10 +3,10 @@ import {Then} from '@cucumber/cucumber';
 import {assert} from 'chai';
 
 Then('smoke tests are wired up', async function () {
-  const {devDependencies, eslintConfigs, scripts} = this.results;
+  const {devDependencies, eslint, scripts} = this.results;
 
   assert.includeMembers(devDependencies, ['cypress', 'start-server-and-test', 'is-website-vulnerable']);
-  assert.deepInclude(eslintConfigs, {files: 'test/smoke/**/*-spec.js', name: 'cypress'});
+  assert.deepInclude(eslint.configs, {files: 'test/smoke/**/*-spec.js', name: 'cypress'});
   assert.include(
     scripts,
     {

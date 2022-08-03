@@ -3,11 +3,11 @@ import {Then} from '@cucumber/cucumber';
 import {assert} from 'chai';
 
 Then('the site is available', async function () {
-  const {buildDirectory, dependencies, eslintConfigs, nextSteps, scripts} = this.results;
+  const {buildDirectory, dependencies, eslint, nextSteps, scripts} = this.results;
 
   assert.equal(buildDirectory, 'public');
   assert.includeMembers(dependencies, ['gatsby', 'react', 'react-dom']);
-  assert.include(eslintConfigs, 'react');
+  assert.include(eslint.configs, 'react');
   assert.include(
     scripts,
     {

@@ -11,7 +11,7 @@ export default async function ({projectRoot}) {
 
   return {
     dependencies: ['gatsby', 'react', 'react-dom'],
-    eslintConfigs: ['react'],
+    eslint: {configs: ['react']},
     buildDirectory: 'public',
     vcsIgnore: {directories: ['.cache']},
     scripts: {
