@@ -30,7 +30,7 @@ suite('gatsby scaffolder', () => {
       {
         buildDirectory: 'public',
         dependencies: ['gatsby', 'react', 'react-dom'],
-        eslintConfigs: ['react'],
+        eslint: {configs: ['react']},
         scripts: {
           clean: 'gatsby clean',
           start: 'run-s dev',
