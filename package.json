@@ -83,6 +83,6 @@
     "@form8ion/cypress-scaffolder": "^3.0.0",
     "@form8ion/is-website-vulnerable": "^1.0.0",
     "deepmerge": "^4.2.2",
-    "make-dir": "^3.1.0"
+    "make-dir": "^4.0.0"
   }
 }
