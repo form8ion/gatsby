@@ -56,7 +56,7 @@
     "@form8ion/eslint-config-mocha": "3.0.0",
     "@form8ion/eslint-config-react": "1.16.22",
     "@form8ion/remark-lint-preset": "6.0.0",
-    "@travi/any": "2.1.9",
+    "@travi/any": "2.1.10",
     "babel-plugin-istanbul": "6.1.1",
     "ban-sensitive-files": "1.10.0",
     "c8": "8.0.1",
