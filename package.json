@@ -3,23 +3,14 @@
   "description": "opinionated scaffolder for Gatsby",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
-  "files": [
-    "example.js",
-    "lib/",
-    "templates/"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org)",
+  "repository": "form8ion/gatsby",
+  "bugs": "https://github.com/form8ion/gatsby/issues",
+  "homepage": "https://npm.im/@form8ion/gatsby",
   "runkitExampleFilename": "./example.js",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "sideEffects": false,
-  "repository": "form8ion/gatsby",
-  "bugs": "https://github.com/form8ion/gatsby/issues",
-  "homepage": "https://npm.im/@form8ion/gatsby",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org)",
   "scripts": {
     "pretest": "run-s build",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
@@ -48,6 +39,21 @@
     "test:integration:wip:debug": "DEBUG=test run-s 'test:integration:wip'",
     "prepare": "husky install",
     "lint:publish": "publint"
+  },
+  "files": [
+    "example.js",
+    "lib/",
+    "templates/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "dependencies": {
+    "@form8ion/cypress-scaffolder": "^3.0.0",
+    "@form8ion/is-website-vulnerable": "^1.0.0",
+    "deepmerge": "^4.2.2",
+    "make-dir": "^4.0.0"
   },
   "devDependencies": {
     "@babel/register": "7.22.15",
@@ -82,11 +88,5 @@
     "rollup": "4.3.0",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "17.0.1"
-  },
-  "dependencies": {
-    "@form8ion/cypress-scaffolder": "^3.0.0",
-    "@form8ion/is-website-vulnerable": "^1.0.0",
-    "deepmerge": "^4.2.2",
-    "make-dir": "^4.0.0"
   }
 }
