@@ -1,10 +1,12 @@
 import deepmerge from 'deepmerge';
+
 import {assert} from 'chai';
 import sinon from 'sinon';
 import any from '@travi/any';
-import * as testingScaffolder from './testing-scaffolder';
-import * as gatsbyScaffolder from './gatsby-scaffolder';
-import scaffold from './scaffolder';
+
+import * as testingScaffolder from './testing-scaffolder.js';
+import * as gatsbyScaffolder from './gatsby-scaffolder.js';
+import scaffold from './scaffolder.js';
 
 suite('scaffolder', () => {
   let sandbox;

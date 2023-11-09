@@ -1,6 +1,7 @@
 import deepmerge from 'deepmerge';
-import scaffoldTesting from './testing-scaffolder';
-import scaffoldGatsbty from './gatsby-scaffolder';
+
+import scaffoldTesting from './testing-scaffolder.js';
+import scaffoldGatsbty from './gatsby-scaffolder.js';
 
 export default async function ({projectRoot}) {
   const [testingResults, gatsbyResults] = await Promise.all([
