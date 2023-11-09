@@ -9,7 +9,8 @@
     "templates/"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "runkitExampleFilename": "./example.js",
   "main": "lib/index.cjs.js",
@@ -44,7 +45,8 @@
     "test:unit:base": "DEBUG=any mocha 'src/**/*-test.js'",
     "lint:peer": "npm ls >/dev/null",
     "test:integration:wip:debug": "DEBUG=test run-s 'test:integration:wip'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:publish": "publint"
   },
   "devDependencies": {
     "@babel/register": "7.22.15",
@@ -70,6 +72,7 @@
     "mock-fs": "5.2.0",
     "npm-run-all2": "6.1.1",
     "package-preview": "4.0.0",
+    "publint": "0.2.5",
     "react": "18.2.0",
     "remark-cli": "12.0.0",
     "remark-toc": "9.0.0",
