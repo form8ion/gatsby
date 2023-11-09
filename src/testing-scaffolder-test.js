@@ -1,10 +1,12 @@
 import deepmerge from 'deepmerge';
 import cypressScaffolder from '@form8ion/cypress-scaffolder';
 import * as vulnerableScaffolder from '@form8ion/is-website-vulnerable';
+
 import sinon from 'sinon';
 import any from '@travi/any';
 import {assert} from 'chai';
-import scaffoldTesting from './testing-scaffolder';
+
+import scaffoldTesting from './testing-scaffolder.js';
 
 suite('testing scaffolder', () => {
   let sandbox;

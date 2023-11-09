@@ -1,10 +1,12 @@
 import {promises as fs} from 'fs';
 import {resolve} from 'path';
+
 import {assert} from 'chai';
 import sinon from 'sinon';
 import any from '@travi/any';
-import * as mkdir from '../thirdparty-wrappers/make-dir';
-import scaffold from './gatsby-scaffolder';
+
+import * as mkdir from '../thirdparty-wrappers/make-dir.js';
+import scaffold from './gatsby-scaffolder.js';
 
 suite('gatsby scaffolder', () => {
   let sandbox;

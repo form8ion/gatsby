@@ -1,6 +1,7 @@
 import {promises as fs} from 'fs';
 import {resolve} from 'path';
-import mkdir from '../thirdparty-wrappers/make-dir';
+
+import mkdir from '../thirdparty-wrappers/make-dir.js';
 
 export default async function ({projectRoot}) {
   const pathToPagesDirectory = await mkdir(`${projectRoot}/src/pages`);

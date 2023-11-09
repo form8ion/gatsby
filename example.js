@@ -3,7 +3,7 @@
 import {promises as fs} from 'fs';
 import {resolve} from 'path';
 import stubbedFs from 'mock-fs';
-import {scaffold} from './lib/index.cjs';
+import {scaffold} from './lib/index.cjs.js';
 
 // #### Execute
 
